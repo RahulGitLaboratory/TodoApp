@@ -6,7 +6,7 @@ steps:
     [
       'build',
       '-t',
-      'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoApp-fastapi-api:$SHORT_SHA',
+      'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoapp-fastapi:$SHORT_SHA',
       '.'
     ]
 
@@ -15,7 +15,7 @@ steps:
   args:
     [
       'push',
-      'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoApp-fastapi-api:$SHORT_SHA'
+      'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoapp-fastapi:$SHORT_SHA'
     ]
 
 # Step 3: Deploy to Cloud Run
@@ -27,7 +27,7 @@ steps:
       'deploy',
       'fastapi-api',
       '--image',
-      'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoApp-fastapi-api:$SHORT_SHA',
+      'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoapp-fastapi:$SHORT_SHA',
       '--region',
       'us-central1',
       '--platform',
@@ -36,7 +36,7 @@ steps:
     ]
 
 images:
-- 'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoApp-fastapi-api:$SHORT_SHA'
+- 'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/todoapp-fastapi:$SHORT_SHA'
 
 options:
   logging: CLOUD_LOGGING_ONLY
