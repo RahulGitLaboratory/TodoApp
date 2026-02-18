@@ -37,3 +37,7 @@ steps:
 
 images:
 - 'us-central1-docker.pkg.dev/project-7f7e50ff-c654-4c24-867/my-first-artifact-registry/fastapi-api:$SHORT_SHA'
+
+options:
+  logging: CLOUD_LOGGING_ONLY
+
