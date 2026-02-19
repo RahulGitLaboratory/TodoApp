@@ -4,7 +4,7 @@ FROM python:3.12-slim
 # Prevent Python from writing pyc files
 ENV PYTHONDONTWRITEBYTECODE=1
 
-# Ensure logs go straight to Cloud Run logs
+# Ensure logs go straight to Cloud Run logs.
 ENV PYTHONUNBUFFERED=1
 
 WORKDIR /app
